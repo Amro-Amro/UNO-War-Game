@@ -1,3 +1,5 @@
+package student;
+
 public class CardPile {
 
     private Card[] c1;
@@ -6,50 +8,44 @@ public class CardPile {
     public CardPile(Card topCard){
         c1 =  new Card[52];
         topIndex = 0;
-
-        if (topCard != null) {
-            c1[0] = topCard; // Set the top card
-            topIndex = 1;}
-        else{
-            throw new IllegalArgumentException("Illegal move detected!");
+        if(topCard == null){
+            return;
         }
+        c1[0] = topCard; // Set the top card
+        topIndex = 1;
 
     }
 
-    public boolean canPlay(Card card){
-        if(card == null){
-            throw new IllegalArgumentException("Illegal move detected!");
+    public boolean canPlay(Card card) {
+        if (card == null) {
+            System.out.println("Illegal move detected!cc");
+            return false;
         }
 
-        if(topIndex == 0){
-            return false;
+        if (topIndex == 0) {
+            return true;
         }
 
         Card topCard = c1[topIndex - 1];
 
-        if(card.getRankNum() > topCard.getRankNum() ||
-            card.getRankNum() == topCard.getRankNum() ||
-            card.getSuitNum() == topCard.getSuitNum()){
-            return true;}
-
-        return false;
+        return (card.getRankNum() > topCard.getRankNum() || card.getSuitNum() == topCard.getSuitNum());
     }
+
 
     public void play(Card card){
         if(card == null){
-            throw new IllegalArgumentException("Illegal move detected!");
+            throw new IllegalArgumentException("Illegal move detected!c");
         }
 
         if(!canPlay(card)){
-            System.out.println("Illegal move detected!");
-            return;
+            throw new IllegalArgumentException("Illegal move detected!ccccccc");
         }
 
         if(topIndex < c1.length){
             c1[topIndex] = card;
             topIndex ++;
         } else {
-            System.out.println("Illegal move detected!");
+            System.out.println("Illegal move detected! Cardpile");
         }
     }
 
