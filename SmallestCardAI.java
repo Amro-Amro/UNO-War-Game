@@ -1,9 +1,9 @@
 package student;
 
-public class SmallestCardAI {
+public class SmallestCardAI extends AI{
 
-    @Override
-    public Card getPlay(Hand hand, CardPile cardPile){
+     @Override
+     public Card getPlay(Hand hand, CardPile cardPile){
 
         if(hand == null || hand.getSize() == 0){
             return null;}
