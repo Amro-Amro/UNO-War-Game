@@ -1,6 +1,6 @@
 package student;
 
-public abstract class AI {
+public class AI {
 
      public Card getPlay(Hand hand, CardPile cardPile) {
         if(hand == null || hand.getSize() == 0){
