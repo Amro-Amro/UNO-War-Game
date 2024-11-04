@@ -33,7 +33,7 @@ public class Hand {
 
         for (int j = 0; j < hand.length; j++) {
             if (hand[j].equals(card)) {
-                hand[j] = deck.draw(); // Or shift cards to keep hand intact
+                hand[j] = deck.draw(); 
                 return true;
             }
         }
