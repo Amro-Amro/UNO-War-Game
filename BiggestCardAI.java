@@ -1,6 +1,6 @@
 package student;
 
-public class BiggestCardAI {
+public class BiggestCardAI extends AI {
 
     @Override
     public Card getPlay(Hand hand, CardPile cardPile){
