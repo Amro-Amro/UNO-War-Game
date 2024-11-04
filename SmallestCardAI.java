@@ -14,7 +14,7 @@ public class SmallestCardAI {
 
             if (cardPile.canPlay(card)) {
 
-                if(min == null || min.getRankNum() < card.getRankNum()){
+                if(min == null || min.getRankNum() > card.getRankNum()){
                     min = card;
                 }
             }
