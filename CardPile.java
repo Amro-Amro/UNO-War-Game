@@ -54,7 +54,7 @@ public class CardPile {
 
         Card topCard = c1[topIndex - 1];
 
-        return (card.getRankNum() >= topCard.getRankNum() || card.getSuitNum() == topCard.getSuitNum());
+        return (card.getRankNum() > topCard.getRankNum() || card.getSuitNum() == topCard.getSuitNum());
     }
 
     /**
