@@ -58,7 +58,8 @@ public class Hand {
             System.out.println("Invalid hand index!");
             return hand[0];
         } else { 
-            return hand[i]; }
+            return hand[i]; 
+        }
     }
 
     /**
