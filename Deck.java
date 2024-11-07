@@ -56,14 +56,14 @@ public class Deck {
      *
      * @return the next card in the deck
      */
-    public Card draw(){
-        if(currentIndex >= deck.length){
+    public Card draw() {
+        if (currentIndex >= deck.length) {
             shuffle();
             currentIndex = 0;
         }
 
         Card nextCard = deck[currentIndex];
-        currentIndex ++;
+        currentIndex++;
         return nextCard;
 
     }
@@ -80,8 +80,8 @@ public class Deck {
      *
      * @return true if the deck is empty, and false otherwise
      */
-    public boolean isEmpty(){
-        if(deck.length == currentIndex){
+    public boolean isEmpty() {
+        if (deck.length == currentIndex) {
             return true;
         }
         return false;
