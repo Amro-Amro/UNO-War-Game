@@ -26,7 +26,7 @@ public class CardPile {
     public CardPile(Card topCard) {
         c1 =  new Card[52];
         topIndex = 0;
-        if (topCard == null) {
+        if(topCard == null) {
             return;
         }
         c1[0] = topCard; // Set the top card
@@ -54,7 +54,7 @@ public class CardPile {
 
         Card topCard = c1[topIndex - 1];
 
-        return (card.getRankNum() > topCard.getRankNum() || card.getSuitNum() == topCard.getSuitNum());
+        return (card.getRankNum() >= topCard.getRankNum() || card.getSuitNum() == topCard.getSuitNum());
     }
 
     /**
@@ -66,16 +66,19 @@ public class CardPile {
      */
     public void play(Card card) {
         if (card == null) {
-            throw new IllegalArgumentException("Illegal move detected!");
+            System.out.println("Illegal move detected!");
+            return;
         }
 
         if (!canPlay(card)) {
-            throw new IllegalArgumentException("Illegal move detected!");
+            System.out.println("Illegal move detected!");
+            return;
         }
 
         if (topIndex < c1.length) {
             c1[topIndex] = card;
-            topIndex++;
+            topIndex ++;
+
         } else {
             return;
         }
