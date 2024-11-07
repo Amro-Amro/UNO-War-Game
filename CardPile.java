@@ -26,7 +26,7 @@ public class CardPile {
     public CardPile(Card topCard) {
         c1 =  new Card[52];
         topIndex = 0;
-        if(topCard == null) {
+        if (topCard == null) {
             return;
         }
         c1[0] = topCard; // Set the top card
@@ -75,7 +75,7 @@ public class CardPile {
 
         if (topIndex < c1.length) {
             c1[topIndex] = card;
-            topIndex ++;
+            topIndex++;
         } else {
             return;
         }
