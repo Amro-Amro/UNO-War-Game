@@ -8,7 +8,14 @@ import java.util.Random;
  */
 public class Deck {
 
+   /**
+    * This makes an array of cards that will beused in the hand.
+    */
     private Card[] deck;
+
+   /**
+    * This tracks the current index, and allows for us to know if the deckis empty or not.
+    */
     private int currentIndex = 0;
 
     /**
