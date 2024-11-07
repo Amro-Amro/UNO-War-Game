@@ -9,7 +9,7 @@ import java.util.Random;
 public class Deck {
 
    /**
-    * This makes an array of cards that will beused in the hand.
+    * This makes an array of cards that will be used in the hand.
     */
     private Card[] deck;
 
