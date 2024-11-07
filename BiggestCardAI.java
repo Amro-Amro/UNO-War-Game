@@ -19,8 +19,7 @@ public class BiggestCardAI extends AI {
     public Card getPlay(Hand hand, CardPile cardPile) {
 
         if (hand == null || hand.getSize() == 0) {
-            return null; 
-        }
+            return null; }
 
         Card max = null;
 
