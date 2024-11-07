@@ -10,7 +10,14 @@ package student;
  */
 public class Card {
 
+   /**
+     * The rank of the card 1 to 13. This is a private field used to store the card's rank.
+     */
     private int rank;
+
+    /**
+     * The suit of the card from 1 to 4. This is a private field used to store the card's suit.
+     */
     private int suit;
 
     /**
@@ -44,7 +51,7 @@ public class Card {
      *
      * @return the suit of the card as an integer for example 1 = spades
      */
-    public int getSuitNum(){
+    public int getSuitNum() {
         return suit;
     }
 
@@ -126,12 +133,12 @@ public class Card {
      * @return a string representing the card, Ex: Ace of Spades
      */
     @Override
-    public String toString(){
+    public String toString() {
 
         String cardRank = getRankName();
         String cardSuit = getSuitName();
 
-        return cardRank + " of " + cardSuit;}
+        return cardRank + " of " + cardSuit; }
 
     /**
      *
@@ -149,7 +156,7 @@ public class Card {
             return this.rank == otherCard.rank
                 && this.suit == otherCard.suit;
 
-        } else{
+        } else {
             return false;
         }
     }
