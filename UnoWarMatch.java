@@ -7,7 +7,14 @@ package student;
  */
 public class UnoWarMatch {
 
+    /**
+    * This makes AI (1).
+    */
     private AI ai1;
+
+    /**
+    * This makes another AI (2).
+    */
     private AI ai2;
 
     /**
@@ -56,11 +63,11 @@ public class UnoWarMatch {
 
                 if (playingCard == null) {
                     if (currentPlayer == ai1) {
-                        ai2Score ++;
+                        ai2Score++;
                         secondPlayer = ai2;
                     } else {
-                        ai1Score ++;
-                        secondPlayer =ai1;
+                        ai1Score++;
+                        secondPlayer = ai1;
                     }
                     roundOver = true;
 
@@ -95,12 +102,12 @@ public class UnoWarMatch {
          int aiWins = 0;
 
          for (int i = 0; i < nTrials; i++) {
-             if(playGame()){
-                 aiWins ++;
+             if (playGame()) {
+                 aiWins++;
              }
 
          }
-         return (double) aiWins/nTrials;
+         return (double) aiWins / nTrials;
      }
 
 }
