@@ -18,7 +18,7 @@ public class CardPile {
 
     public boolean canPlay(Card card) {
         if (card == null) {
-            System.out.println("Illegal move detected!cc");
+            System.out.println("Illegal move detected!");
             return false;
         }
 
@@ -34,18 +34,18 @@ public class CardPile {
 
     public void play(Card card){
         if(card == null){
-            throw new IllegalArgumentException("Illegal move detected!c");
+            throw new IllegalArgumentException("Illegal move detected!");
         }
 
         if(!canPlay(card)){
-            throw new IllegalArgumentException("Illegal move detected!ccccccc");
+            throw new IllegalArgumentException("Illegal move detected!");
         }
 
         if(topIndex < c1.length){
             c1[topIndex] = card;
             topIndex ++;
         } else {
-            System.out.println("Illegal move detected! Cardpile");
+            return;
         }
     }
 
@@ -59,6 +59,10 @@ public class CardPile {
         }
         return c1[topIndex - 1];
     }
+
+
+
+}
 
 
 
