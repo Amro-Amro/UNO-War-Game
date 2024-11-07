@@ -19,7 +19,7 @@ public class BiggestCardAI extends AI {
     public Card getPlay(Hand hand, CardPile cardPile) {
 
         if (hand == null || hand.getSize() == 0) {
-            return null;}
+            return null; }
 
         Card max = null;
 
@@ -45,5 +45,5 @@ public class BiggestCardAI extends AI {
      */
     @Override
     public String toString() {
-        return "Biggest Card AI";}
+        return "Biggest Card AI"; }
 }
