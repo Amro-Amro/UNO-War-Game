@@ -2,11 +2,19 @@ package student;
 
 import java.util.Random;
 
-public class Deck{
+/**
+ * The Deck class represents a standard deck of 52 playing cards.
+ * It allows for shuffling the deck, drawing cards, and checking if the deck is empty.
+ */
+public class Deck {
 
     private Card[] deck;
     private int currentIndex = 0;
 
+    /**
+     * This is the decks constructor, and it Constructs a new deck of 52 cards.
+     * The deck consists of 13 ranks and 4 suits. The deck is shuffled in the beginning.
+     */
     public Deck() {
 
         deck = new Card[52];
@@ -23,7 +31,11 @@ public class Deck{
         shuffle();
 }
 
-    public void shuffle(){
+    /**
+     * Shuffles the deck of cards using the Fisher-Yates shuffle algorithm.
+     * This algorithm ensures a random order of cards in the deck.
+     */
+    public void shuffle() {
         Random r = new Random();
 
         for (int i = deck.length - 1; i > 0; i--) {
@@ -38,6 +50,12 @@ public class Deck{
         }
     }
 
+    /**
+     * Draws the next card from the deck. If the deck is empty the deck gets reshuffled,
+     * and drawing starts from the beginning.
+     *
+     * @return the next card in the deck
+     */
     public Card draw(){
         if(currentIndex >= deck.length){
             shuffle();
@@ -50,10 +68,18 @@ public class Deck{
 
     }
 
-    public int cardsRemaining(){
+    /**
+     *
+     * @return the number of remaining cards in the deck
+     */
+    public int cardsRemaining() {
         return deck.length - currentIndex;
     }
 
+    /**
+     *
+     * @return true if the deck is empty, and false otherwise
+     */
     public boolean isEmpty(){
         if(deck.length == currentIndex){
             return true;
