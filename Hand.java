@@ -57,7 +57,7 @@ public class Hand {
         if (i >= hand.length || i < 0) {
             System.out.println("Invalid hand index!");
             return hand[0];
-        } else { 
+        } else {
             return hand[i]; 
         }
     }
