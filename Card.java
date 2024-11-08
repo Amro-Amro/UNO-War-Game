@@ -1,6 +1,7 @@
 package student;
 
 /** Name: Amro Abuatieh
+ * Class: CSCI 1913
  *
  * The Card class represents a single playing card in a standard deck.
  * Each card has a rank and a suit, both being integers.
@@ -24,8 +25,8 @@ public class Card {
      * With the given rank and suit, a new card is made.
      * If the rank or suit is invalid, the card will default to Ace of Spades.
      *
-     * @param rank the rank of the card 1 for Ace, 2 for Two, ..., 11 for Jack, 12 for Queen, 13 for King
-     * @param suit the suit of the card 1 for Spades, 2 for Hearts, 3 for Clubs, 4 for Diamonds
+     * @param rank the rank of the card 1 to 13
+     * @param suit the suit of the card 1 to 4
      */
     public Card(int rank, int suit) {
         if (rank < 1 || rank > 13 || suit < 1 || suit > 4) {
