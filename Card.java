@@ -1,7 +1,6 @@
 package student;
 
 /** Name: Amro Abuatieh
- * Class: CSCI 1913
  *
  * The Card class represents a single playing card in a standard deck.
  * Each card has a rank and a suit, both being integers.
