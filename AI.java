@@ -40,4 +40,5 @@ public class AI {
     @Override
     public String toString() {
          return "Random Card AI";
-    }}     
+    }
+}     
