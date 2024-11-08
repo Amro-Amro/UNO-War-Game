@@ -41,4 +41,4 @@ public class AI {
     public String toString() {
          return "Random Card AI";
     }
-}     
+}
